@@ -92,10 +92,10 @@ public:
                         int tmp_x = cur.second + neighbor_pair[neighbor_cnt].second;
                         //printf("tmp_x: %d, tmp_y: %d, nei_sec: %d, nei_first: %d\n", tmp_x, tmp_y, neighbor_pair[neighbor_cnt].second, neighbor_pair[neighbor_cnt].first);
 
-                        std::pair<int, int> tmp_position (tmp_y, tmp_x);
-                        if(is_valid(tmp_position, m, n) && space[tmp_y][tmp_x] == EMPTY_ROOM) {
+                        std::pair<int, int> try_position (tmp_y, tmp_x);
+                        if(is_valid(try_position, m, n) && space[tmp_y][tmp_x] == EMPTY_ROOM) {
                             printf("get empty room: x: %d, y:%d\n", tmp_x, tmp_y);
-                            next.push(tmp_position);
+                            next.push(try_position);
                         }
                     }
                 }
